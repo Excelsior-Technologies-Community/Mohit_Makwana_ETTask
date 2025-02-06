@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+            border: 1px solid black;
+            text-align: center;
+            margin: 50px;
+            padding: 80px;
+            font-size: 40px;
+        }
+        h2{
+            text-align: center;
+        }
+        .mm, .mm2, .mm3, .mm4, .mm5{
+            border: none;
+            padding: 10px;
+        }
+        .btns button{
+            margin-right: 50px;
+        }
+        .mm{
+            background-color: yellow;
+        }
+        .mm2{
+            background-color: red;
+        }
+        .mm3{
+            background-color: blue;
+        }
+        .mm4{
+            background-color: purple;
+        }
+        .mm5{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Task to Fill Color on click</h2>
+
+<div id="demo"><b>Fill me with Color</b></div>
+<div class="btns">
+<button class="mm" type="button" onclick="document.getElementById('demo').style.backgroundColor='Yellow'">Click Me! to fill Yellow</button>
+<button class="mm2" type="button" onclick="document.getElementById('demo').style.backgroundColor='Red'">Click Me! to fill Red</button>
+<button class="mm3" type="button" onclick="document.getElementById('demo').style.backgroundColor='Blue'">Click Me! to fill Blue</button>
+<button class="mm4" type="button" onclick="document.getElementById('demo').style.backgroundColor='Purple'">Click Me! to fill Purple</button>
+<button class="mm5" type="button" onclick="document.getElementById('demo').style.backgroundColor='Green'">Click Me! to fill Green</button>
+</div>
+
+</body>
+</html>

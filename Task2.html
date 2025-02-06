@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Change Grid Layout</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <style>
+  .MM{
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  .form-select{
+    margin-bottom: 35px;
+  }
+    </style>
+    <body>
+        <div class="container mt-4">
+            <!-- <button class="MM" onclick="buttonclickfun('col-md-6')">2 Cards Per Row</button>
+  <button class="MM" onclick="buttonclickfun('col-md-4')">3 Cards Per Row</button>
+  <button class="MM" onclick="buttonclickfun('col-md-3')">4 Cards Per Row</button> -->
+            <!-- <button class="MM" mohitvale="col-md-6">2 Cards Per Row</button>
+  <button class="MM" mohitvale="col-md-4">3 Cards Per Row</button>
+  <button class="MM" mohitvale="col-md-3">4 Cards Per Row</button> -->
+            <select class="form-select" id="select" aria-label="Default select example">
+                <option selected>Open this select menu for different grid view</option>
+                <option value="col-md-6">2 Cards Per Row</option>
+                <option value="col-md-4">3 Cards Per Row</option>
+                <option value="col-md-3">4 Cards Per Row</option>
+            </select>
+            <input type="text" id="gridtext" class="form-contol">
+            <div class="message mt-3"></div>
+            <butto class="btn btn-success mt-3" onclick="addgrid()">Add Grid</butto>
+            <div class="row" id="cardContainer">
+                <div class="col-md-12 maain_div_col mb-3">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md-3">
+                                <img src="/Media/plan-1.webp" class="card-img" alt="img">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Oversized Motif T-shirt</h5>
+                                    <p class="card-text">Button-up shirt sleeves and a relaxed silhouette. It’s tailored with drapey, crinkle-texture fabric that’s made from LENZING™ ECOVERO™ Viscose — responsibly sourced wood-based fibres produced through a process that reduces...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3 maain_div_col">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md-3">
+                                <img src="/Media/plan-2.webp" class="card-img" alt="img">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Oversized Motif T-shirt</h5>
+                                    <p class="card-text">Button-up shirt sleeves and a relaxed silhouette. It’s tailored with drapey, crinkle-texture fabric that’s made from LENZING™ ECOVERO™ Viscose — responsibly sourced wood-based fibres produced through a process that reduces...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3 maain_div_col">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md-3">
+                                <img src="/Media/plan-3.webp" class="card-img" alt="img">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Oversized Motif T-shirt</h5>
+                                    <p class="card-text">Button-up shirt sleeves and a relaxed silhouette. It’s tailored with drapey, crinkle-texture fabric that’s made from LENZING™ ECOVERO™ Viscose — responsibly sourced wood-based fibres produced through a process that reduces...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3 maain_div_col">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md-3">
+                                <img src="/Media/plan-4.webp" class="card-img" alt="img">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Oversized Motif T-shirt</h5>
+                                    <p class="card-text">Button-up shirt sleeves and a relaxed silhouette. It’s tailored with drapey, crinkle-texture fabric that’s made from LENZING™ ECOVERO™ Viscose — responsibly sourced wood-based fibres produced through a process that reduces...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3 maain_div_col">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md-3">
+                                <img src="/Media/plan-5.webp" class="card-img" alt="img">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Oversized Motif T-shirt</h5>
+                                    <p class="card-text">Button-up shirt sleeves and a relaxed silhouette. It’s tailored with drapey, crinkle-texture fabric that’s made from LENZING™ ECOVERO™ Viscose — responsibly sourced wood-based fibres produced through a process that reduces...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3 maain_div_col">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md-3">
+                                <img src="/Media/plan-6.webp" class="card-img" alt="img">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Oversized Motif T-shirt</h5>
+                                    <p class="card-text">Button-up shirt sleeves and a relaxed silhouette. It’s tailored with drapey, crinkle-texture fabric that’s made from LENZING™ ECOVERO™ Viscose — responsibly sourced wood-based fibres produced through a process that reduces...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+
+   var gridtext = document.getElementById('gridtext');
+
+   var message = document.querySelector('.message');
+
+   function addgrid()
+
+   {
+      var gridtextvalue = gridtext.value;
+      message.setAttribute('class','');
+
+
+      // alert(gridtextvalue);
+       
+
+      if (gridtextvalue == "col-md-6")
+
+      {
+        message.innerHTML = "grid valid";
+        message.classList.add("text-success");
+        document.querySelectorAll('.maain_div_col').forEach(el =>{
+          el.setAttribute('class','');
+          el.setAttribute('class',`${gridtextvalue} maain_div_col mb-3`);
+      })
+
+      
+      }
+
+      else if (gridtextvalue == "col-md-4")
+
+      {
+        message.innerHTML = "grid valid";
+        message.classList.add("text-success");
+
+        document.querySelectorAll('.maain_div_col').forEach(el =>{
+          el.setAttribute('class','');
+          el.setAttribute('class',`${gridtextvalue} maain_div_col mb-3`);
+      })
+
+      }
+
+      else if (gridtextvalue == "col-md-3")
+
+{
+  message.innerHTML = "grid valid";
+  message.setAttribute('class','text-success message mt-3');
+
+  document.querySelectorAll('.maain_div_col').forEach(el =>{
+          el.setAttribute('class','');
+          el.setAttribute('class',`${gridtextvalue} maain_div_col mb-3`);
+      })
+}
+else
+{
+  message.innerHTML = "grid in-valid";
+  message.setAttribute('class','text-danger message mt-3');
+}
+   }
+
+  // ==> Change by Select option **************************************************************
+
+    var select = document.getElementById('select');
+
+    select.addEventListener('change', function()
+  {
+    var selectedvalue = select.value;
+    // alert(selectedvalue);
+
+    document.querySelectorAll('.maain_div_col').forEach(el =>{
+          el.setAttribute('class','');
+          el.setAttribute('class',`${selectedvalue} maain_div_col mb-3`);
+      })
+  })
+
+// document.querySelectorAll('select').forEach(el => {
+//      el.addEventListener("change", function()
+//     {
+//       var buttonvale = el.getAttribute('mohitvale');
+
+//       if (buttonvale == "col-md-6")
+
+//   {
+//     document.querySelectorAll('.maain_div_col').forEach(el =>{
+//           el.setAttribute('class','');
+//           el.setAttribute('class','col-md-6 maain_div_col mb-3');
+//       })
+//   }
+
+//   else if (buttonvale == "col-md-4")
+
+// {
+//   document.querySelectorAll('.maain_div_col').forEach(el =>{
+//         el.setAttribute('class','');
+//         el.setAttribute('class','col-md-4 maain_div_col mb-3');
+//     })
+// }
+
+// else
+// {
+//   document.querySelectorAll('.maain_div_col').forEach(el =>{
+//         el.setAttribute('class','');
+//         el.setAttribute('class','col-md-3 maain_div_col mb-3');
+//     })
+// }
+
+
+//     })
+// })
+
+// document.querySelectorAll('button').forEach(el => {
+//      el.addEventListener("click", function()
+//     {
+//       var buttonvale = el.getAttribute('mohitvale');
+
+//       // alert(buttonvale);
+
+//       if (buttonvale == "col-md-6")
+
+//   {
+//     document.querySelectorAll('.maain_div_col').forEach(el =>{
+//           el.setAttribute('class','');
+//           el.setAttribute('class','col-md-6 maain_div_col mb-3');
+//       })
+//   }
+
+//   else if (buttonvale == "col-md-4")
+
+// {
+//   document.querySelectorAll('.maain_div_col').forEach(el =>{
+//         el.setAttribute('class','');
+//         el.setAttribute('class','col-md-4 maain_div_col mb-3');
+//     })
+// }
+
+// else
+// {
+//   document.querySelectorAll('.maain_div_col').forEach(el =>{
+//         el.setAttribute('class','');
+//         el.setAttribute('class','col-md-3 maain_div_col mb-3');
+//     })
+// }
+
+
+//     })
+// })
+
+
+
+//     function buttonclickfun(colclass)
+ 
+//     {
+//       // alert(colclass);
+//   if (colclass == "col-md-6")
+
+//   {
+//     document.querySelectorAll('.maain_div_col').forEach(el =>{
+//           el.setAttribute('class','');
+//           el.setAttribute('class','col-md-6 maain_div_col mb-3');
+//       })
+//   }
+
+//   else if (colclass == "col-md-4")
+
+// {
+//   document.querySelectorAll('.maain_div_col').forEach(el =>{
+//         el.setAttribute('class','');
+//         el.setAttribute('class','col-md-4 maain_div_col mb-3');
+//     })
+// }
+
+// else
+// {
+//   document.querySelectorAll('.maain_div_col').forEach(el =>{
+//         el.setAttribute('class','');
+//         el.setAttribute('class','col-md-3 maain_div_col mb-3');
+//     })
+// }
+
+//     }
+
+
+  //   document.getElementById("changeGridBtn").addEventListener("click", function () {
+  //     const cards = document.querySelectorAll("#cardContainer .maain_div_col");
+
+  //     cards.forEach((card) => {
+  //       card.classList.remove("col-md-12");
+  //       card.classList.remove("col-md-4"); 
+  //       card.classList.remove("col-md-3"); 
+
+
+  //       card.classList.add("col-md-6"); 
+
+  //       document.querySelectorAll("#cardContainer .maain_div_col .col-md-3").forEach((element) => {
+  //   element.classList.remove("col-md-3"); // Added this line
+  //   element.classList.add("col-md-12");
+  // });
+
+        
+  //     });
+  //   });
+
+  //   document.getElementById("changeGridBtn2").addEventListener("click", function () {
+  //     const cards = document.querySelectorAll("#cardContainer .maain_div_col");
+
+  //     cards.forEach((card) => {
+  //       card.classList.remove("col-md-12"); 
+  //       card.classList.remove("col-md-3"); 
+  //       card.classList.remove("col-md-6"); 
+
+
+  //       card.classList.add("col-md-4"); 
+  //     });
+
+  //     document.querySelectorAll("#cardContainer .maain_div_col .col-md-3").forEach((element) => {
+  //   element.classList.remove("col-md-3"); // Added this line
+  //   element.classList.add("col-md-12");
+  // });
+  //   });
+
+  //   document.getElementById("changeGridBtn3").addEventListener("click", function () {
+  //     const cards = document.querySelectorAll("#cardContainer .maain_div_col");
+
+  //     cards.forEach((card) => {
+  //       card.classList.remove("col-md-12"); 
+  //       card.classList.remove("col-md-4"); 
+  //       card.classList.remove("col-md-6"); 
+
+
+  //       card.classList.add("col-md-3"); 
+  //     });
+
+  //     document.querySelectorAll("#cardContainer .maain_div_col .col-md-3").forEach((element) => {
+  //   element.classList.remove("col-md-3"); // Added this line
+  //   element.classList.add("col-md-12");
+  // });
+  //   });
+        </script>
+    </body>
+</html>
